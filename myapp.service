@@ -1,0 +1,11 @@
+[Unit]
+Description=myapp.sh script
+[Service]
+Type=simple
+ExecStart=/bin/bash /opt/myapp/myapp.sh
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=30s
+SyslogIdentifier=myapp.sh
+[Install]
+WantedBy=multi-user.target
