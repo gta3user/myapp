@@ -94,7 +94,7 @@ sleep 1s
 while $running; do
 if findServiceName; then
   echo "Restarting $serviceName service..."
-  #systemctl restart backend@$serviceName.service
+  systemctl restart backend@$serviceName.service
   getCurrentTime
   echo "$cdate localhost worker-$name: Service backend@$serviceName.service has been restarted." >> $logfile
   startTime=$cdate
